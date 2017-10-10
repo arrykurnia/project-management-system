@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h2 class="panel-title">Register Account</h2>
+          </div><br>
+          <form id="register-form" method="post" action="/register" role="form" autocomplete="off">
+            <div class="form-group">
+              <input type="firstname" name="firstname" id="firstname" tabindex="1" class="form-control" placeholder="First Name" value="">
+            </div>
+            <div class="form-group">
+              <input type="latname" name="lastname" id="lastname" tabindex="2" class="form-control" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+            </div>
+            <div class="form-group">
+              <input type="password" name="pass" id="password" tabindex="2" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <input type="password" name="repass" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+            </div>
+            <div class="form-group">
+              <div class="row">
+                <div class="col-xs-6 col-xs-offset-3">
+                  <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                </div>
+              </div>
+            </div>
+            <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+          </form>
+          <% if(message.length > 0){ %>
+            <div class="alert alert-info">
+              <strong>Info!</strong> <%= message %>.
+            </div>
+          <% } %>
+        </div>
+      </ul>
+    </li>
+  </body>
+  </html>
